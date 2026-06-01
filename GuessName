@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Guessgame {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int target = 65; // Number to guess
+        int guess;
+
+        do {
+            System.out.print("Guess the number: ");
+            guess = sc.nextInt();
+
+            if (guess < target) {
+                System.out.println("Your guess is less than the target number.");
+            } 
+            else if (guess > target) {
+                System.out.println("Your guess is greater than the target number.");
+            } 
+            else {
+                System.out.println("Congratulations! You guessed the correct number.");
+            }
+
+        } while (guess != target);
+
+        sc.close();
+    }
+}
